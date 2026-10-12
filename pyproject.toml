@@ -1,0 +1,53 @@
+[project]
+name = "keysheet"
+version = "0.1.0"
+description = "Your own cheat sheet of key shortcuts and commands, searchable from the shell with fzf"
+readme = "README.md"
+license = "GPL-3.0-or-later"
+license-files = ["LICENSE"]
+authors = [{ name = "Alvaro Gonzalez-Jimenez" }]
+requires-python = ">=3.10"
+dependencies = []
+keywords = ["cheatsheet", "cheat-sheet", "fzf", "shortcuts", "cli", "zsh", "bash", "dotfiles"]
+classifiers = [
+    "Development Status :: 4 - Beta",
+    "Environment :: Console",
+    "Intended Audience :: Developers",
+    "Operating System :: POSIX",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3 :: Only",
+    "Topic :: System :: Shells",
+    "Topic :: Utilities",
+]
+
+[project.urls]
+Homepage = "https://github.com/alvarogonjim/keysheet"
+Issues = "https://github.com/alvarogonjim/keysheet/issues"
+
+[project.scripts]
+keysheet = "keysheet.cli:main"
+
+[build-system]
+requires = ["hatchling>=1.27"]
+build-backend = "hatchling.build"
+
+[tool.hatch.build.targets.wheel]
+packages = ["src/keysheet"]
+
+[dependency-groups]
+dev = ["pytest>=9.1", "ruff>=0.16"]
+
+[tool.ruff]
+line-length = 100
+target-version = "py310"
+
+[tool.ruff.lint]
+select = ["E", "F", "W", "I", "UP", "B", "SIM", "RUF"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+
+[tool.uv]
+# Lock only releases at least two weeks old at the time of locking; move the date forward
+# to take newer versions (then: uv lock --upgrade)
+exclude-newer = "2026-09-28T00:00:00Z"

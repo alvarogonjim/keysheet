@@ -1,0 +1,20 @@
+// Example sheet: tmux with its default prefix, Ctrl-B (press it, let go, then the key).
+# tmux: panes
+Ctrl-B %                split side by side
+Ctrl-B "                split top and bottom
+Ctrl-B arrow            move to the pane in that direction
+Ctrl-B z                zoom the pane in and out
+Ctrl-B x                close the pane
+Ctrl-B q                show pane numbers (press one to go there)
+
+# tmux: windows and sessions
+Ctrl-B c                new window
+Ctrl-B 0…9              go to window 0…9 (Ctrl-B n / p: next / previous)
+Ctrl-B ,                rename the window
+Ctrl-B s                choose a session from a list (Ctrl-B w: a window)
+Ctrl-B d                detach: everything keeps running in the background
+Ctrl-B [                scroll and copy mode (q leaves it)
+Ctrl-B ?                tmux's own list of all keys
+$ tmux new -s NAME      start a session called NAME
+$ tmux a                reattach to the last session
+$ tmux ls               list the sessions

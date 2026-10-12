@@ -1,0 +1,24 @@
+// Example sheet: keys that work in bash and zsh (emacs mode, the default), and a few
+// commands. Make it yours: delete what you know, add what you keep forgetting.
+# Shell: keys
+Ctrl-R                  search your command history (again: older matches)
+Ctrl-A / Ctrl-E         jump to the start / end of the line
+Alt-B / Alt-F           move one word back / forward
+Ctrl-U                  delete from the cursor to the start of the line
+Ctrl-K                  delete from the cursor to the end of the line
+Ctrl-W                  delete the word before the cursor
+Ctrl-Y                  paste what you just deleted
+Alt-.                   insert the last argument of the previous command
+Ctrl-L                  clear the screen
+Ctrl-X Ctrl-E           edit the current command in $EDITOR
+Ctrl-C / Ctrl-Z         stop / pause the running command (fg resumes it)
+
+# Shell: commands
+$ cd -                  back to the previous folder
+!!                      the previous command (sudo !! runs it again as root)
+$ history | grep WORD   find a command you ran before
+$ fg                    resume the paused command
+$ jobs                  commands paused or running in the background
+$ du -sh * | sort -h    what takes space in this folder
+$ df -h                 free space on each disk
+$ chmod +x FILE         make a script executable

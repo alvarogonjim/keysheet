@@ -1,0 +1,14 @@
+// Example sheet: everyday git.
+# Git
+$ git status            what changed
+$ git add -p            stage changes piece by piece, answering y / n for each
+$ git commit -m "MESSAGE"  commit what is staged
+$ git commit --amend    fix the last commit (message or content) before pushing
+$ git switch BRANCH     go to a branch (git switch -c NEW: create one)
+$ git log --oneline --graph --all  history as a graph
+$ git diff --staged     what is staged for the next commit
+$ git stash             put changes aside (git stash pop: bring them back)
+$ git restore FILE      throw away the changes to a file
+$ git restore --staged FILE  unstage a file, keeping its changes
+$ git push -u origin HEAD  push a new branch and track it
+$ git reflog            every place HEAD has been: finds "lost" commits
